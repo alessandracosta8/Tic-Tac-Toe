@@ -19,11 +19,7 @@
 - [Testing and Validation](#testing-and-validation)
     - [PEP8](#pep8)
     - [Manual testing](#manual-testing)
-    - [Compatibility](#compatibility)
     - [User stories testing](#user-stories-testing)
-        - [Website owner](#website-owner)
-        - [New visitor](#new-visitor)
-        - [Returning visitor](#returning-visitor)
     - [Bugs](#bugs)
         - [From the Slack feedback request](#from-the-slack-feedback-request)
     - [Unfixed Bugs](#unfixed-bugs)
@@ -43,8 +39,15 @@ Tic-tac-toe is a game in which two players take turns in drawing either an 'O' o
 &nbsp;
 
 ### User goals
-The user can improve their skill at the game excercising with this program which puts them against the computer.
-The user can navigate through the game with very easy commands and always available reference of the possible choices when making a move.
+For the program owner:
+- Offer entertainment to their user willing to play the game.
+- Give informations about the game.
+- Give options to the user to quit the game through the menu navigation.
+
+For new users and returning visitors:
+- Excercise their Tic Tac Toe skills playing against the computer.
+- Easy to navigate commands and interface.
+- Reference navigation commands always available.
 
 &nbsp;
 
@@ -70,7 +73,67 @@ To create the structure of the game, this diagram was created using [Lucid Chart
 4. If the user chooses to quit the game, a thank you message appears on the screen and the program quits.
 ![quit screen](assets/quit_screen.png)
 
-5. If the user chooses to play, 
+5. If the user chooses to play, the firts turn instruction and reference board will populate the screen. Then the user will get propted for a first choice.
+![first turn screen](assets/first_turn_screen.png)
+
+6. After the user inputs their choice, the choice gets shown into the board and the cumputer makes its move which gets shown on the board as well. Then the program asks for the next move from the user.
+![second turn screen](assets/second_turn_screen.png)
+
+7. The promt for a choice will continue until the game is won with three symbols in a row or both players have run out of moves.
+![user wins](assets/user_wins_screen.png)
+
+
+&nbsp;
+
+### Future feature to implement
+- Online multiplayer: the ability to play online with friends.
+- Two players mode on the same device.
+- Improve the computer difficulties in three different levels: easy, intermediate and hard.
+
+&nbsp;
+
+## Technologies Used
+---
+
+- JavaScript - generated from the python essential template build by Code Institute.
+- GitHub - Version control.
+- GitPod - IDE used to code the program and for some of the manual testing.
+- Heroku - Program deployment for the users to access it without deploy it themselves.
+
+&nbsp;
+
+## Libraries used
+---
+
+- Math - for calculation and managment of numbers and data types.
+- Random - to randomize the choices of the computer player.
+- Time - to slow down the respode of the program and allow the user to view the response of the computer.
+
+&nbsp;
+
+## Testing and Validation
+---
+
+### PEP8
+The code was checked with PEP8 validator and passed with no error found.
+
+&nbsp;
+
+### Manual testing
+All features have been tested manually with a Mac Mini and a Chromebook with multiple browsers (Chrome, Safari, Firefox).
+
+&nbsp;
+
+### User stories testing
+For the program owner:
+- The game offers entertainment to the users and the chance to play it multiple times.
+- The game contains informations about the game of Tic Tac Toe that the user can easily access.
+- The game give options to the user to quit the game at the menu if they would like.
+
+For new users and returning visitors:
+- The user can improve their skill at the game excercising with this program which puts them against the computer.
+- The user can navigate through the game with very easy commands
+- Always available reference of the possible choices when making a move, makes it easy to find the right commands.
 
 
 

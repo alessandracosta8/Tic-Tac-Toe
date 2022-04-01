@@ -170,7 +170,9 @@ def play(game, x_player, o_player, print_game=True):
     Returns the winner if there is one or None for a tie.
     """
     if print_game:
-        print("------------------")
+        print('')
+        print("To select one of the cells:")
+        print("Type the number in the spot of your choice!")
         print('')
         print("Reference board:")
         game.print_board_nums()
@@ -219,7 +221,11 @@ def play(game, x_player, o_player, print_game=True):
 
 def explain_game():
     print("")
-    print("Tic-tac-toe is a game in which two players take turns in drawing either an 'O' or an 'X' in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row, vertically, horizontally or diagonally.")
+    print("Tic-tac-toe is a game in which two players take turns in drawing")
+    print("either an 'O' or an 'X' in one square of a grid")
+    print("consisting of nine squares.")
+    print("The winner is the first player to get three of the same symbols")
+    print("in a row, vertically, horizontally or diagonally.")
     print("")
     print("Now press 'p' to play or 'q' to quit the game!")
 
@@ -236,7 +242,8 @@ if __name__ == "__main__":
     print('')
     print(f"Welcome {name}!")
     print('')
-    print("You have the X symbol assigned to you to play, while the computer has the symbol O")
+    print("You have the X symbol assigned to you to play,")
+    print("while the computer has the symbol O")
     print('')
     print("To continue, select a command with one of the following keys:")
     print("'p' to play the game")
