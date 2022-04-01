@@ -54,13 +54,22 @@ class HumanPlayer(Player):
                     raise ValueError
                 valid_cell = True  # if no error found -> then must be valid
             except ValueError:
-                print("Invalid cell. Try again.")
+                print("Invalid cell. Try again a cell number from 0-8.")
         return value
+
+
+def mockup_board():
+    """
+    Mockup board to keep visible during the game to facilitate UX
+    """
+    num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+    for row in num_board:
+        print("| " + " | ".join(row) + " |")
 
 
 class TicTacToe:
     """
-    Class for the main game of Tic Tac Toe
+    Class that defines the kind of game
     """
     def __init__(self):
         """
@@ -182,6 +191,9 @@ def play(game, x_player, o_player, print_game=True):
             if print_game:
                 print(f"{letter} makes a move to cell {cell}")
                 game.print_board()
+                print("")  # empty line to separate visually
+                print("Cell numbers reminder:")
+                mockup_board()
                 print("")  # empty line to separate visually
 
             if game.current_winner:
