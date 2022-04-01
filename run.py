@@ -86,6 +86,7 @@ class TicTacToe:
         """
         Show the number corrispondent to the cells and prints separators
         """
+        print('')
         num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in num_board:
             print("| " + " | ".join(row) + " |")
@@ -183,6 +184,8 @@ def play(game, x_player, o_player, print_game=True):
         # make a move
         if game.make_move(cell, letter):
             if print_game:
+                print('')
+                print('')
                 print(f"{letter} makes a move to cell {cell}")
                 game.print_board()
                 print("")  # empty line to separate visually
@@ -215,7 +218,6 @@ def explain_game():
     print("Tic-tac-toe is a game in which two players take turns in drawing either an 'O' or an 'X' in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row, vertically, horizontally or diagonally.")
     print("")
     print("Now press 'p' to play or 'q' to quit the game!")
-    
 
 
 if __name__ == "__main__":
@@ -226,9 +228,10 @@ if __name__ == "__main__":
     print("What's you name?")
     name = input()
     print(f"Welcome {name}!")
-    print("To play press 'p'")
-    print("To read the rules press 'r'")
-    print("To quit the game press 'q'")
+    print("To continue, select a command with one of the following keys:")
+    print("'p' to play the game")
+    print("'r' to read the rules")
+    print("'q' To quit the game")
     while True:
         user_choice = input().strip().lower()
         if user_choice == 'r':
