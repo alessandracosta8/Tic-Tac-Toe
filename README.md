@@ -49,9 +49,29 @@ The user can navigate through the game with very easy commands and always availa
 &nbsp;
 
 ### Flow Chart
+To create the structure of the game, this diagram was created using [Lucid Charts](https://www.lucidchart.com/)
 ![Flow Chart](assets/game_structure.jpeg)
 
 &nbsp;
+
+## Features
+---
+
+### Game
+1. Welcome Screen which asks for the name of the user.
+![Welcome Screen](assets/welcome_screen.png)
+
+2. Once the user has input their name, the main menu of the game asks the user what they would like to do next giving them a choice to play immediately, check the rules of the game, or quitting the game.
+![menu screen](assets/menu_screen.png)
+
+3. If the user selects to review the rules of the game, a description appears and then the user gets asked to select another options from playing or quitting the game.
+![rules screen](assets/rules_screen.png)
+
+4. If the user chooses to quit the game, a thank you message appears on the screen and the program quits.
+![quit screen](assets/quit_screen.png)
+
+5. If the user chooses to play, 
+
 
 
 ## Index

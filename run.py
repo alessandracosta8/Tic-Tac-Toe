@@ -170,7 +170,11 @@ def play(game, x_player, o_player, print_game=True):
     Returns the winner if there is one or None for a tie.
     """
     if print_game:
+        print("------------------")
+        print('')
+        print("Reference board:")
         game.print_board_nums()
+        print('')
 
     letter = "X"  # starting letter
 
@@ -224,10 +228,16 @@ if __name__ == "__main__":
     x_player = HumanPlayer("X")
     o_player = ComputerPlayer("O")
     t = TicTacToe()
+    print('')
     print("Welcome to Tic Tac Toe!")
     print("What's you name?")
     name = input()
+    print("------------------")
+    print('')
     print(f"Welcome {name}!")
+    print('')
+    print("You have the X symbol assigned to you to play, while the computer has the symbol O")
+    print('')
     print("To continue, select a command with one of the following keys:")
     print("'p' to play the game")
     print("'r' to read the rules")
@@ -239,7 +249,9 @@ if __name__ == "__main__":
         elif user_choice == 'p':
             play(t, x_player, o_player, print_game=True)
         elif user_choice == 'q':
+            print('')
             print(f"Thank you {name} for playing!")
+            print('')
             quit()
         else:
             print("Wrong input. Press 'p' to play or 'r' to read the rules.")
