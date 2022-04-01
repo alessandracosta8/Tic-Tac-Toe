@@ -1,3 +1,41 @@
+import math
+import random
+
+
+class Player:
+    """
+    Initiates a player class. Each player in the game will be represented with an X or an O.
+    get_move function will allow all players to get their next move.
+    """
+    def __init__(self, letter):
+        self.letter = letter
+    
+    def get_move(self, game):
+        pass
+
+
+class ComputerPlayer(Player):
+    """
+    Specific kind of player that is going to be managed by the program.
+    """
+    def __init__(self, letter):
+        super().__init__(letter)
+    
+    def get_move(self, game):
+        pass
+
+
+class HumanPlayer(Player):
+    """
+    Specific class for the human player.
+    """
+    def __init__(self, letter):
+        super().__init__(letter)
+    
+    def get_move(self, game):
+        pass
+
+
 class TicTacToe:
     """
     Class for the main game of Tic Tac Toe
@@ -14,4 +52,15 @@ class TicTacToe:
             # print a vertical line as a separator
             print("| " + " | ".join(row) + " |")
 
-print(TicTacToe().print_board())
+
+    @staticmethod
+    def print_board_nums():
+        """
+        Show the number corrispondent to the cells and prints separators
+        """
+        number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+        for row in number_board:
+            print("| " + " | ".join(row) + " |")
+
+
+print(TicTacToe().print_board_nums())

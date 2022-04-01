@@ -29,3 +29,10 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 -----
 Happy coding!
+
+
+# CREDITS
+
+[Python Classmethods and Staticmethods](https://www.youtube.com/watch?v=rq8cL2XMM5M)
+
+[12 Beginner Python Projects](https://www.youtube.com/watch?v=8ext9G7xspg&t=2189s)
