@@ -1,6 +1,8 @@
 # Tic Tac Toe game
 
-[Deployed Game Link]
+![deployed game screenshot](assets/deployed_screen.png)
+
+[Deployed Game Link](https://tic-tac-toe-pp3-python.herokuapp.com/)
 
 &nbsp;
 
