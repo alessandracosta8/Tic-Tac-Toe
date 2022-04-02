@@ -41,7 +41,7 @@ class HumanPlayer(Player):
         valid_cell = None
         value = None
         while not valid_cell:
-            cell = input(self.letter + "'s turn. Input move (0-8):")
+            cell = input(self.letter + "'s turn. Input move (0-8):\n")
             try:
                 value = int(cell)
                 if value not in game.available_moves():
