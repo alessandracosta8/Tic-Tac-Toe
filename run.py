@@ -232,6 +232,7 @@ def explain_game():
     print("Now press 'p' to play or 'q' to quit the game!")
 
 
+# To only run when file is run directly and not when imported
 if __name__ == "__main__":
     x_player = HumanPlayer("X")
     o_player = ComputerPlayer("O")
