@@ -202,6 +202,8 @@ def play(game, x_player, o_player, print_game=True):
             if game.current_winner:
                 if print_game:
                     print(letter + " wins!")
+                    print("Thank you for playing!")
+                    print('')
                     quit()
                 return letter  # returns the winner of the game
 
