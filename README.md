@@ -24,6 +24,7 @@
         - [From the Slack feedback request](#from-the-slack-feedback-request)
     - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
+    - [How to deploy](#how-to-deploy)
 - [Credits](#credits)
 
 
@@ -57,10 +58,16 @@ To create the structure of the game, this diagram was created using [Lucid Chart
 
 &nbsp;
 
+[Back to Table of contents](#table-of-contents)
+
+&nbsp;
+
 ## Features
 ---
 
 ### Game
+Here's what the program does and how the game plays:
+
 1. Welcome Screen which asks for the name of the user.
 ![Welcome Screen](assets/welcome_screen.png)
 
@@ -92,6 +99,10 @@ To create the structure of the game, this diagram was created using [Lucid Chart
 
 &nbsp;
 
+[Back to Table of contents](#table-of-contents)
+
+&nbsp;
+
 ## Technologies Used
 ---
 
@@ -102,12 +113,20 @@ To create the structure of the game, this diagram was created using [Lucid Chart
 
 &nbsp;
 
+[Back to Table of contents](#table-of-contents)
+
+&nbsp;
+
 ## Libraries used
 ---
 
 - Math - for calculation and managment of numbers and data types.
 - Random - to randomize the choices of the computer player.
 - Time - to slow down the respode of the program and allow the user to view the response of the computer.
+
+&nbsp;
+
+[Back to Table of contents](#table-of-contents)
 
 &nbsp;
 
@@ -135,53 +154,69 @@ For new users and returning visitors:
 - The user can navigate through the game with very easy commands
 - Always available reference of the possible choices when making a move, makes it easy to find the right commands.
 
+&nbsp;
 
-
-
-
-
-
-## Index
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+### Bugs
+- Game automatically lets user win at first move. Fixed missing colon and indentation in "winner" function.
+- Corrected prompt to the user for the next move to suggest numbers from 0-8, since is 0 index based instead of 1-9.
+- Added extra spaces in-between command line prompt to help visual clarity for the user.
 
 &nbsp;
 
+#### From the Slack feedback request
 
+
+&nbsp;
+
+### Unfixed Bugs
+- None that I'm aware of at the moment.
+
+&nbsp;
+
+## Deployment
+There is only this main branch of the project version available in GitHub.
+This version is also deployed live on Heroku - [Link]
+
+### How to deploy
+To deploy this page to Heroku from its [GitHub repository](https://github.com/alessandracosta8/Tic-Tac-Toe) the following steps were taken:
+
+- Log into or register a new account at [Heroku](https://www.heroku.com/).
+- Click on the button **New** in the top right corner of the dashboard.
+- From the drop-down menu then select **Create new app**.
+- Enter your app name in the first field, the names must be unique so check that then name you have chosen is available on Heroku, then select your region.
+- Click on **Create App**.
+- Once the app is created you will see the Overview panel of the application. Now move to the **Settings** tab.
+- Once you are in the **Settings** tab scroll down till you find **Config Vars**.
+- Press the button **Reveal Config Vars** and for 'KEY' field, type in 'PORT' and for the value field type in '8000'.
+Then press the **Add** button.
+- Scroll down to **Buildpacks**. Click the button **Add buildpack** and select 'python'. Do the same step and add 'node.js'.
+**PYTHON MUST BE ON TOP OF THE BUILDPACKS. IF IN YOUR CASE NODE.JS IS FIRST, CLICK AND DRAG PYTHON TO TOP AND SAVE.**
+- Return back to the **Deploy** tab. From the deployment method, select 'Github' as the deployment.
+- You will be asked to connect your github account. Confirm and proceed.
+- Search for your repository name and connect.
+- Once that is done and successfully connected, select how you want to push updates from the following options.
+
+  _Clicking **Enable Automatic Deploys**. This will update once you push updates to your Github._
+
+  _Selecting the correct branch for deployment from drop-down menu and pressing **Deploy Branch** button. This will have to be done everytime manually._
+
+&nbsp;
+
+[Back to Table of contents](#table-of-contents)
+
+&nbsp;
 
 ## Credits
 ---
 
-[Python Classmethods and Staticmethods](https://www.youtube.com/watch?v=rq8cL2XMM5M)
-
-[12 Beginner Python Projects](https://www.youtube.com/watch?v=8ext9G7xspg&t=2189s)
-
-[Tic Tac Toe definition - Collins Dictionary](https://www.collinsdictionary.com/dictionary/english/tic-tac-toe#:~:text=Tic%2Dtac%2Dtoe%20is%20a,same%20symbols%20in%20a%20row.)
+- [Python Classmethods and Staticmethods](https://www.youtube.com/watch?v=rq8cL2XMM5M)
+- [12 Beginner Python Projects](https://www.youtube.com/watch?v=8ext9G7xspg&t=2189s)
+- [Tic Tac Toe definition - Collins Dictionary](https://www.collinsdictionary.com/dictionary/english/tic-tac-toe#:~:text=Tic%2Dtac%2Dtoe%20is%20a,same%20symbols%20in%20a%20row.)
+- [W3 Schools](https://www.w3schools.com/)
+- [Github](https://github.com/marcin-kli/MP1/blob/Milestone-Projects/README.md) - README file example
+- Mentor: Adegbenga Adeye - For his support and patience!
 
 
 &nbsp;
-
 
 [Back to Table of contents](#table-of-contents)
