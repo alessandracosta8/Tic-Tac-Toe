@@ -21,7 +21,6 @@
     - [Manual testing](#manual-testing)
     - [User stories testing](#user-stories-testing)
     - [Bugs](#bugs)
-        - [From the Slack feedback request](#from-the-slack-feedback-request)
     - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
     - [How to deploy](#how-to-deploy)
@@ -160,11 +159,6 @@ For new users and returning visitors:
 - Game automatically lets user win at first move. Fixed missing colon and indentation in "winner" function.
 - Corrected prompt to the user for the next move to suggest numbers from 0-8, since is 0 index based instead of 1-9.
 - Added extra spaces in-between command line prompt to help visual clarity for the user.
-
-&nbsp;
-
-#### From the Slack feedback request
-
 
 &nbsp;
 
