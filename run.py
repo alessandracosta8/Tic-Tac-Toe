@@ -280,12 +280,14 @@ def main():
     Main function that calls the start and end of game.
     """
     print('')
-    print("Would you like to play Tic Tac Toe? Enter 'y' for YES or 'n' for NO:")
+    print("Would you like to play Tic Tac Toe?")
+    print("Enter 'y' for YES or 'n' for NO:")
     user_choice = input().strip().lower()
     if user_choice == 'y':
         start_the_game()
         while True:
-            print("Would you like to play again? Enter 'y' for YES or 'n' for NO:")
+            print("Would you like to play again?")
+            print("Enter 'y' for YES or 'n' for NO:")
             user_choice = input().strip().lower()
             if user_choice == 'y':
                 start_the_game()
@@ -293,7 +295,7 @@ def main():
                 print("Thank you for playing")
                 sys.exit(0)
             else:
-                print("Invalid command. Press 'y' to start and 'n' to quit.")       
+                print("Invalid command. Press 'y' to start and 'n' to quit.")
     elif user_choice == 'n':
         print("Thank you for playing")
         sys.exit(0)
