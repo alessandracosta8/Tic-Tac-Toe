@@ -293,12 +293,12 @@ def main():
                 start_the_game()
             elif user_choice == 'n':
                 print("Thank you for playing")
-                sys.exit(0)
+                break
             else:
                 print("Invalid command. Press 'y' to start and 'n' to quit.")
     elif user_choice == 'n':
         print("Thank you for playing")
-        sys.exit(0)
+        return None
     else:
         print("Invalid command. Press 'y' to start and 'n' to quit.")
 
