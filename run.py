@@ -1,6 +1,7 @@
 import math
 import random
 import time
+import sys
 
 
 class Player:
@@ -162,6 +163,12 @@ class TicTacToe:
         return False
 
 
+def next_steps():
+    """
+    Brings the user back to choose if they want to continue playing or not.
+    """
+
+
 def play(game, x_player, o_player, print_game=True):
     """
     Main function to play the game.
@@ -201,7 +208,8 @@ def play(game, x_player, o_player, print_game=True):
 
             if game.current_winner:
                 if print_game:
-                    print(letter + " wins!")
+                    print(letter + " wins! \n")
+                    print('')
                 return letter  # returns the winner of the game
 
             # after the move, alternate letters
@@ -215,7 +223,7 @@ def play(game, x_player, o_player, print_game=True):
 
     if print_game:
         print("It's a tie!")
-        quit()
+        return None
 
 
 def explain_game():
@@ -229,46 +237,68 @@ def explain_game():
     print("Now press 'p' to play or 'q' to quit the game!")
 
 
-if __name__ == "__main__":
-    
+def start_the_game():
+    """
+    Gives the user menu for info, start the game or quit.
+    """
+    x_player = HumanPlayer("X")
+    o_player = ComputerPlayer("O")
+    t = TicTacToe()
+    print('')
+    print("Welcome to Tic Tac Toe!")
+    print("What's you name?")
+    name = input()
+    print("------------------")
+    print('')
+    print(f"Welcome {name}!")
+    print('')
+    print("You have the X symbol assigned to you to play,")
+    print("while the computer has the symbol O")
+    print('')
+    print("To continue, select a command with one of the following:")
+    print("'p' to play the game")
+    print("'r' to read the rules")
+    print("'q' To quit the game")
     while True:
-        print("Would you like to play a new game of Tic Tac Toe?\n")
-        print("Press 's' to start and 'q' to quit:")
-
-        start_game = input().strip().lower()
-        if start_game == 's':
-            x_player = HumanPlayer("X")
-            o_player = ComputerPlayer("O")
-            t = TicTacToe()
+        user_choice = input().strip().lower()
+        if user_choice == 'r':
+            explain_game()
+        elif user_choice == 'p':
+            play(t, x_player, o_player, print_game=True)
+            return
+        elif user_choice == 'q':
             print('')
-            print("Welcome to Tic Tac Toe!")
-            print("What's you name?")
-            name = input()
-            print("------------------")
+            print(f"Thank you {name} for playing!")
             print('')
-            print(f"Welcome {name}!")
-            print('')
-            print("You have the X symbol assigned to you to play,")
-            print("while the computer has the symbol O")
-            print('')
-            print("To continue, select a command with one of the following keys:")
-            print("'p' to play the game")
-            print("'r' to read the rules")
-            print("'q' To quit the game")
-            while True:
-                user_choice = input().strip().lower()
-                if user_choice == 'r':
-                    explain_game()
-                elif user_choice == 'p':
-                    play(t, x_player, o_player, print_game=True)
-                elif user_choice == 'q':
-                    print('')
-                    print(f"Thank you {name} for playing!")
-                    print('')
-                    quit()
-                else:
-                    print("Wrong input. Press 'p' to play or 'r' to read the rules.")
-        elif start_game == 'q':
-            break
+            sys.exit(0)
         else:
-            print("Invalid command. Press 's' to start and 'q' to quit.")
+            print("Wrong input. Press 'p' to play or 'r' to read the rules.")
+
+
+def main():
+    """
+    Main function that calls the start and end of game.
+    """
+    print('')
+    print("Would you like to play Tic Tac Toe? Enter 'y' for YES or 'n' for NO:")
+    user_choice = input().strip().lower()
+    if user_choice == 'y':
+        start_the_game()
+        while True:
+            print("Would you like to play again? Enter 'y' for YES or 'n' for NO:")
+            user_choice = input().strip().lower()
+            if user_choice == 'y':
+                start_the_game()
+            elif user_choice == 'n':
+                print("Thank you for playing")
+                sys.exit(0)
+            else:
+                print("Invalid command. Press 'y' to start and 'n' to quit.")       
+    elif user_choice == 'n':
+        print("Thank you for playing")
+        sys.exit(0)
+    else:
+        print("Invalid command. Press 'y' to start and 'n' to quit.")
+
+
+main()
