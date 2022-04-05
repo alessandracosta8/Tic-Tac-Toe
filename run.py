@@ -86,7 +86,7 @@ class TicTacToe:
         """
         Show the number corrispondent to the cells and prints separators
         """
-        print('')  # empty line to separate visually
+        print('')
         num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in num_board:
             print("| " + " | ".join(row) + " |")
@@ -172,7 +172,8 @@ def play(game, x_player, o_player, print_game=True):
     if print_game:
         print('')
         print("To select one of the cells:")
-        print("Type the number in the spot of your choice!\n")
+        print("Type the number in the spot of your choice!")
+        print('')
         print("Reference board:")
         game.print_board_nums()
         print('')
@@ -193,17 +194,14 @@ def play(game, x_player, o_player, print_game=True):
                 print('')
                 print(f"{letter} makes a move to cell {cell}")
                 game.print_board()
-                print('')
+                print("")  # empty line to separate visually
                 print("Reference board:")
                 mockup_board()
-                print('')
+                print("")  # empty line to separate visually
 
             if game.current_winner:
                 if print_game:
                     print(letter + " wins!")
-                    print("Thank you for playing!\n")
-                    print("To start the game again type 'python3 run.py'\n")
-                    quit()
                 return letter  # returns the winner of the game
 
             # after the move, alternate letters
@@ -221,44 +219,56 @@ def play(game, x_player, o_player, print_game=True):
 
 
 def explain_game():
-    """
-    Game instructions
-    """
-    print('')
+    print("")
     print("Tic-tac-toe is a game in which two players take turns in drawing")
     print("either an 'O' or an 'X' in one square of a grid")
     print("consisting of nine squares.")
     print("The winner is the first player to get three of the same symbols")
-    print("in a row, vertically, horizontally or diagonally.\n")
+    print("in a row, vertically, horizontally or diagonally.")
+    print("")
     print("Now press 'p' to play or 'q' to quit the game!")
 
 
-# To only run when file is run directly and not when imported
 if __name__ == "__main__":
-    x_player = HumanPlayer("X")
-    o_player = ComputerPlayer("O")
-    t = TicTacToe()
-    print('')
-    print("Welcome to Tic Tac Toe!")
-    print("What's you name?")
-    name = input()
-    print("------------------\n")
-    print(f"Welcome {name}!\n")
-    print("You have the X symbol assigned to you to play,")
-    print("while the computer has the symbol O\n")
-    print("To continue, select a command with one of the following keys:")
-    print("'p' to play the game")
-    print("'r' to read the rules")
-    print("'q' To quit the game")
+    
     while True:
-        user_choice = input().strip().lower()
-        if user_choice == 'r':
-            explain_game()
-        elif user_choice == 'p':
-            play(t, x_player, o_player, print_game=True)
-        elif user_choice == 'q':
+        print("Would you like to play a new game of Tic Tac Toe?\n")
+        print("Press 's' to start and 'q' to quit:")
+
+        start_game = input().strip().lower()
+        if start_game == 's':
+            x_player = HumanPlayer("X")
+            o_player = ComputerPlayer("O")
+            t = TicTacToe()
             print('')
-            print(f"Thank you {name} for playing!\n")
-            quit()
+            print("Welcome to Tic Tac Toe!")
+            print("What's you name?")
+            name = input()
+            print("------------------")
+            print('')
+            print(f"Welcome {name}!")
+            print('')
+            print("You have the X symbol assigned to you to play,")
+            print("while the computer has the symbol O")
+            print('')
+            print("To continue, select a command with one of the following keys:")
+            print("'p' to play the game")
+            print("'r' to read the rules")
+            print("'q' To quit the game")
+            while True:
+                user_choice = input().strip().lower()
+                if user_choice == 'r':
+                    explain_game()
+                elif user_choice == 'p':
+                    play(t, x_player, o_player, print_game=True)
+                elif user_choice == 'q':
+                    print('')
+                    print(f"Thank you {name} for playing!")
+                    print('')
+                    quit()
+                else:
+                    print("Wrong input. Press 'p' to play or 'r' to read the rules.")
+        elif start_game == 'q':
+            break
         else:
-            print("Wrong input. Press 'p' to play or 'r' to read the rules.")
+            print("Invalid command. Press 's' to start and 'q' to quit.")
