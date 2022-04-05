@@ -1,7 +1,6 @@
 import math
 import random
 import time
-import sys
 
 
 class Player:
@@ -204,7 +203,7 @@ def play(game, x_player, o_player, print_game=True):
                     print(letter + " wins!")
                     print("Thank you for playing!\n")
                     print("To start the game again type 'python3 run.py'\n")
-                    sys.exit()
+                    quit()
                 return letter  # returns the winner of the game
 
             # after the move, alternate letters
@@ -218,10 +217,13 @@ def play(game, x_player, o_player, print_game=True):
 
     if print_game:
         print("It's a tie!")
-        sys.exit()
+        quit()
 
 
 def explain_game():
+    """
+    Game instructions
+    """
     print('')
     print("Tic-tac-toe is a game in which two players take turns in drawing")
     print("either an 'O' or an 'X' in one square of a grid")
@@ -257,6 +259,6 @@ if __name__ == "__main__":
         elif user_choice == 'q':
             print('')
             print(f"Thank you {name} for playing!\n")
-            sys.exit()
+            quit()
         else:
             print("Wrong input. Press 'p' to play or 'r' to read the rules.")
