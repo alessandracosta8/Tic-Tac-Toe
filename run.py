@@ -263,7 +263,7 @@ def start_the_game():
             print('')
             print(f"Thank you {name} for playing!")
             print('')
-            sys.exit(0)
+            break
         else:
             print("Wrong input. Press 'p' to play or 'r' to read the rules.")
 
