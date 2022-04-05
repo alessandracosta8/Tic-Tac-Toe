@@ -245,13 +245,6 @@ def start_the_game():
     o_player = ComputerPlayer("O")
     t = TicTacToe()
     print('')
-    print("Welcome to Tic Tac Toe!")
-    print("What's you name?")
-    name = input()
-    print("------------------")
-    print('')
-    print(f"Welcome {name}!")
-    print('')
     print("You have the X symbol assigned to you to play,")
     print("while the computer has the symbol O")
     print('')
@@ -279,6 +272,13 @@ def main():
     """
     Main function that calls the start and end of game.
     """
+    print('')
+    print("Welcome to Tic Tac Toe!")
+    print("What's you name?")
+    name = input()
+    print("------------------")
+    print('')
+    print(f"Welcome {name}!")
     print('')
     print("Would you like to play Tic Tac Toe?")
     print("Enter 'y' for YES or 'n' for NO:")
