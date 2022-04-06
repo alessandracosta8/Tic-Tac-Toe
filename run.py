@@ -1,7 +1,7 @@
 import math
 import random
 import time
-import sys
+import os
 
 
 class Player:
@@ -163,10 +163,20 @@ class TicTacToe:
         return False
 
 
-def next_steps():
+def clear_screen(numlines=100):
     """
-    Brings the user back to choose if they want to continue playing or not.
+    Clear the console.
+    numlines is an optional argument used only as a fall-back.
     """
+    if os.name == "posix":
+        # Unix/Linux/MacOS/BSD/etc
+        os.system('clear')
+    elif os.name in ("nt", "dos", "ce"):
+        # DOS/Windows
+        os.system('CLS')
+    else:
+        # Fallback for other operating systems.
+        print('\n' * numlines)
 
 
 def play(game, x_player, o_player, print_game=True):
@@ -257,13 +267,15 @@ def start_the_game():
         if user_choice == 'r':
             explain_game()
         elif user_choice == 'p':
+            clear_screen()
             play(t, x_player, o_player, print_game=True)
             return
         elif user_choice == 'q':
+            clear_screen()
             print('')
-            print(f"Thank you {name} for playing!")
+            print("Thank you for playing!")
             print('')
-            sys.exit(0)
+            break
         else:
             print("Wrong input. Press 'p' to play or 'r' to read the rules.")
 
@@ -272,6 +284,7 @@ def main():
     """
     Main function that calls the start and end of game.
     """
+    clear_screen()
     print('')
     print("Welcome to Tic Tac Toe!")
     print("What's you name?")
@@ -284,23 +297,30 @@ def main():
     print("Enter 'y' for YES or 'n' for NO:")
     user_choice = input().strip().lower()
     if user_choice == 'y':
+        clear_screen()
         start_the_game()
         while True:
             print("Would you like to play again?")
             print("Enter 'y' for YES or 'n' for NO:")
             user_choice = input().strip().lower()
             if user_choice == 'y':
+                clear_screen()
                 start_the_game()
             elif user_choice == 'n':
-                print("Thank you for playing")
-                sys.exit(0)
+                clear_screen()
+                print("Thank you for playing!")
+                break
             else:
                 print("Invalid command. Press 'y' to start and 'n' to quit.")
     elif user_choice == 'n':
-        print("Thank you for playing")
-        sys.exit(0)
+        clear_screen()
+        print("Thank you for playing!")
+        print("To restart the game:")
+        print("press Run program above the terminal window.")
     else:
         print("Invalid command. Press 'y' to start and 'n' to quit.")
 
 
-main()
+if __name__ == '__main__':
+    while True:
+        main()
