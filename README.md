@@ -35,21 +35,21 @@
 ---
 
 ### Website owners goals
-The goal of this program is to play a game of Tic Tac Toe against the computer.
-Tic-tac-toe is a game in which two players take turns in drawing either an 'O' or an 'X' in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row, vertically, horizontally or diagonally.
+- Offer entertainment to their user willing to play the game.
+- Give informations about the game.
+- Give options to the user to play again ad many times as they want.
 
 &nbsp;
 
 ### User goals
-For the program owner:
-- Offer entertainment to their user willing to play the game.
-- Give informations about the game.
-- Give options to the user to quit the game through the menu navigation.
+For new users:
+- The goal of this program is to play a game of Tic Tac Toe against the computer.
+- Easily navigate commands and interface.
+- Having reference navigation commands always available.
 
-For new users and returning visitors:
+Returning visitors:
 - Excercise their Tic Tac Toe skills playing against the computer.
-- Easy to navigate commands and interface.
-- Reference navigation commands always available.
+- Having the ability to play the game for as many time as they want.
 
 &nbsp;
 
@@ -124,6 +124,7 @@ Here's what the program does and how the game plays:
 - Math - for calculation and managment of numbers and data types.
 - Random - to randomize the choices of the computer player.
 - Time - to slow down the respode of the program and allow the user to view the response of the computer.
+- Os - to create the clear_screen() function, which facilitates the UX eliminating previous code on the terminal window making it clutter free.
 
 &nbsp;
 
