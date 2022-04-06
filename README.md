@@ -212,6 +212,7 @@ Then press the **Add** button.
 - [Tic Tac Toe definition - Collins Dictionary](https://www.collinsdictionary.com/dictionary/english/tic-tac-toe#:~:text=Tic%2Dtac%2Dtoe%20is%20a,same%20symbols%20in%20a%20row.)
 - [W3 Schools](https://www.w3schools.com/)
 - [Github](https://github.com/marcin-kli/MP1/blob/Milestone-Projects/README.md) - README file example
+- [GitHub](https://github.com/MustafaSahinci/project-portofolio-3) - clear screen function example
 - Mentor: Adegbenga Adeye - For his support and patience!
 
 

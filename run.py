@@ -165,14 +165,14 @@ class TicTacToe:
 
 def clear_screen(numlines=100):
     """
-    Clear the console.
+    Clears the console to simplify UX and clear visual clutter.
     numlines is an optional argument used only as a fall-back.
     """
     if os.name == "posix":
-        # Unix/Linux/MacOS/BSD/etc
+        # for OS => Unix / Linux / MacOS / BSD / etc
         os.system('clear')
     elif os.name in ("nt", "dos", "ce"):
-        # DOS/Windows
+        #  for OS => DOS / Windows
         os.system('CLS')
     else:
         # Fallback for other operating systems.
