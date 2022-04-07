@@ -72,22 +72,28 @@ Here's what the program does and how the game plays:
 1. Welcome Screen which asks for the name of the user.
 ![Welcome Screen](assets/welcome_screen.png)
 
-2. Once the user has input their name, the main menu of the game asks the user what they would like to do next giving them a choice to play immediately, check the rules of the game, or quitting the game.
-![menu screen](assets/menu_screen.png)
+2. Once the user has input their name, the program prompts the user if the would like to start the game.
+![Initiate game](assets/initiate_game.png)
 
-3. If the user selects to review the rules of the game, a description appears and then the user gets asked to select another options from playing or quitting the game.
-![rules screen](assets/rules_screen.png)
+3. If the user decides to quit the game, the program automatically restarts, ready to be played agan.
+![Restart screen](assets/restart_screen.png)
 
-4. If the user chooses to quit the game, a thank you message appears on the screen and the program quits.
-![quit screen](assets/quit_screen.png)
+4. The menu of the game then asks the user what they would like to do next giving them a choice to play immediately, check the rules of the game, or quitting the game.
+![Menu screen](assets/menu_screen.png)
 
-5. If the user chooses to play, the firts turn instruction and reference board will populate the screen. Then the user will get propted for a first choice.
-![first turn screen](assets/first_turn_screen.png)
+5. If the user selects to review the rules of the game, a description appears and then the user gets asked to select another options from playing or quitting the game.
+![Rules screen](assets/rules_screen.png)
 
-6. After the user inputs their choice, the choice gets shown into the board and the cumputer makes its move which gets shown on the board as well. Then the program asks for the next move from the user.
-![second turn screen](assets/second_turn_screen.png)
+6. If the user chooses to quit the game, a thank you message appears on the screen and the program restarts again, ready to be used.
+![Quit screen](assets/restart_screen.png)
 
-7. The promt for a choice will continue until the game is won with three symbols in a row or both players have run out of moves.
+7. If the user chooses to play, the firts turn instruction and reference board will populate the screen. Then the user will get propted for a first choice.
+![First turn screen](assets/first_turn_screen.png)
+
+8. After the user inputs their choice, the choice gets shown into the board and the cumputer makes its move which gets shown on the board as well. Then the program asks for the next move from the user.
+![Second turn screen](assets/second_turn_screen.png)
+
+9. The promt for a choice will continue until the game is won with three symbols in a row or both players have run out of moves in a tie. A feedback message will display in both cases and then the game will restart again ready to be used.
 ![user wins](assets/user_wins_screen.png)
 
 

@@ -265,6 +265,7 @@ def start_the_game():
     while True:
         user_choice = input().strip().lower()
         if user_choice == 'r':
+            clear_screen()
             explain_game()
         elif user_choice == 'p':
             clear_screen()
